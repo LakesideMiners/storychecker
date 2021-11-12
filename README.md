@@ -1,8 +1,11 @@
+This is a program used to assist in formating the "How Could Anyone Love a Fox Like Me?" fanfic. Feel free to adapt this for your own use, but be warned that this tool has no support offered.
+
+
 Make sure you have python 3 installed.
 it can be gotton here. use the installer for your platform.
 (e.g. Windows Installer 64-bit install)
 https://www.python.org/downloads/release/python-3100/
-
+(I use python 3.8, the above link is for python 3.10, it SHOULD work, if not, let me know.)
 
 To use on Windows. put the file you want to fix in the same folder as ```main.py```
 then open a powershell window and change to the storychecker directory.
@@ -20,3 +23,9 @@ then
 the output will be in
 
 ```out.txt```
+
+
+## TODO
+- [ ] Clean Up This Readme
+- [ ] Add more checks fixes
+- [ ] 
