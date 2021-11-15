@@ -1,10 +1,13 @@
 import re  # We need Regex
 import shutil  # Copy tool
-from difflib import Differ
+import difflib  # Diff tool
+import os
 
 # Make a copy of the file, the way this works will never change, so its not a function
 shutil.copy("input.txt", "copyfile.txt")
 
+
+# TODO make this delate the files if they exist
 
 # Replace the contents of the file
 def replace_words(pattern, replace_with):
@@ -18,20 +21,17 @@ def replace_words(pattern, replace_with):
 
 
 def create_diff():
-    file1 = open("input.txt")
-    file2 = open("copyfile.txt")
-    with open("file1.txt") as f:
-        file1_lines = f.readlines()
-    with open("file2.txt") as f:
-        file2_lines = f.readlines()
-    d = Differ()
-    difference = list(d.compare(file1_lines, file2_lines))
-    difference = '\n'.join(difference)
-    print(difference)
-    diff = difflib.ndiff(f1_content, f2_content)
-    output = difflib.SequenceMatcher(None, file1.read(), file2.read())
-    print(output)
+    with open("copyfile.txt") as f1, open("output.txt") as f2:  # Open two files
+        content1 = f1.read().splitlines(keepends=True)  # Read the file
+        content2 = f2.read().splitlines(keepends=True)
+        diff = difflib.HtmlDiff()  # Create a tool object
+        result = diff.make_file(content1, content2)  # Get file comparison results
+        diff_file = open("diffoutput.html", "w")
+        diff_file.write(result)  # Output results, you can see the source code written in html)
+        diff_file.close()
 
 
+# format is
 replace_words(str("(cyn-nick|Cyn-nick|cyn-Nick)"), str("Cyn-Nick"))
+replace_words(str("the"), str("APPLE"))
 create_diff()
