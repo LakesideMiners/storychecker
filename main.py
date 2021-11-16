@@ -2,7 +2,6 @@ import re  # We need Regex
 import shutil  # Copy tool
 import difflib  # Diff tool
 import os
-
 # Make a copy of the file, the way this works will never change, so its not a function
 shutil.copy("input.txt", "copyfile.txt")
 
