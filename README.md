@@ -14,6 +14,11 @@ then open a powershell window and change to the storychecker directory.
 
 then type
 
+```
+pip install virtualenv
+python3 -m venv venv
+```
+Then
 ```source venv\Script\Activate.ps1```
 
 then
@@ -22,10 +27,12 @@ then
 
 the output will be in
 
-```out.txt```
+```diffoutput.html```
+
+open this file in a browser
 
 
 ## TODO
 - [ ] Clean Up This Readme
-- [ ] Add more checks fixes
-- [ ] 
+- [ ] Add more checks
+- [ ] Remove the copyfile.txt, output.txt and diffoutput.html before doing checks
