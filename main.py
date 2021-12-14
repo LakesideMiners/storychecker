@@ -5,6 +5,13 @@ import os
 import glob
 
 
+# Create the "datafiles" folder if it does not exist
+def create_folder():
+    if not os.path.exists('datafiles'):
+        os.makedirs('datafiles')
+    else:
+        print('folder already exists')
+
 
 # Remove Old Files
 def remove_old():
@@ -23,7 +30,7 @@ def replace_words(pattern, replace_with):
     with open("input.txt", 'r') as pre:
         content = pre.read()
         content = re.sub(pattern, replace_with, content, flags=re.M)
-    with open("datafile/output.txt", 'w') as post:
+    with open("datafiles/output.txt", 'w') as post:
         post.write(content)
     pre.close()
     post.close()
@@ -32,7 +39,7 @@ def replace_words(pattern, replace_with):
 # Make the diff
 def create_diff():
     print("Creating Diff View")
-    with open("datafile/copyfile.txt") as f1, open("datafile/output.txt") as f2:  # Open two files
+    with open("datafiles/copyfile.txt") as f1, open("datafiles/output.txt") as f2:  # Open two files
         content1 = f1.read().splitlines(keepends=True)  # Read the file
         content2 = f2.read().splitlines(keepends=True)
         diff = difflib.HtmlDiff(wrapcolumn=100)  # Create a tool object, set it to wrap then at 80 chars
@@ -44,8 +51,9 @@ def create_diff():
 
 
 # Do Shit Here
+create_folder()
 remove_old()
-shutil.copy("input.txt", "datafile/copyfile.txt")
+shutil.copy("input.txt", "datafiles/copyfile.txt")
 replace_words("(cyn-nick|Cyn-nick|cyn-Nick)", "Cyn-Nick")
 create_diff()
 print("Done")
