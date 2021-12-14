@@ -36,3 +36,4 @@ open this file in a browser
 - [ ] Clean Up This Readme
 - [ ] Add more checks
 - [ ] Remove the copyfile.txt, output.txt and diffoutput.html before doing checks
+- [ ] Add insturctions on python venv
