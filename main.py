@@ -3,9 +3,7 @@ import shutil  # Copy tool
 import difflib  # Diff tool
 import os
 import glob
-from tkinter import filedialog as fd
 
-filename = fd.askopenfilename()
 
 
 # Remove Old Files
@@ -22,7 +20,7 @@ def remove_old():
 # Replace the contents of the file
 def replace_words(pattern, replace_with):
     print("Replacing: " + pattern + " with: " + replace_with)
-    with open(filename, 'r') as pre:
+    with open("input.txt", 'r') as pre:
         content = pre.read()
         content = re.sub(pattern, replace_with, content, flags=re.M)
     with open("datafile/output.txt", 'w') as post:
@@ -47,7 +45,7 @@ def create_diff():
 
 # Do Shit Here
 remove_old()
-shutil.copy(filename, "datafile/copyfile.txt")
+shutil.copy("input.txt", "datafile/copyfile.txt")
 replace_words("(cyn-nick|Cyn-nick|cyn-Nick)", "Cyn-Nick")
 create_diff()
 print("Done")
