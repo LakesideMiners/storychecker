@@ -1,3 +1,6 @@
+## THESE NEED TO BE UPDATED! THE FOLLOWING WILL NOT WORK! FOR NOW JUST USE THE FILES IN THE BUILD ARTFCATS!
+
+
 This is a program used to assist in formating the "How Could Anyone Love a Fox Like Me?" fanfic. Feel free to adapt this for your own use, but be warned that this tool has no support offered.
 
 
