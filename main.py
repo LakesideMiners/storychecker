@@ -45,7 +45,7 @@ def create_diff():
         diff = difflib.HtmlDiff(wrapcolumn=100)  # Create a tool object, set it to wrap then at 80 chars
         result = diff.make_file(content1, content2, context=True, numlines=2)  # Get file comparison results,
         # show the context rather then full file, and shows 2 lines of context
-        diff_file = open("../diffoutput.html", "w")
+        diff_file = open("diffoutput.html", "w")
         diff_file.write(result)  # Output results, you can see the source code written in html)
         diff_file.close()
 

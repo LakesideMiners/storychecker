@@ -1,5 +1,5 @@
-src/datafile/output.txt
-src/datafile/copyfile.txt
+datafile/output.txt
+datafile/copyfile.txt
 input.txt
 diffoutput.html
 venv
