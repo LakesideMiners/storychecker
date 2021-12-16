@@ -7,7 +7,7 @@ Feel free to adapt this for your own use, but be warned that this tool has no su
 
 # Download
 Click on the badge at the top. the click the most recent thing with a green checkmark next to it. e.g.
-![image](https://github.com/LakesideMiners/storychecker/blob/master/aafefaeafeafeafeafeafea.jpg?raw=true)
+![image](https://github.com/LakesideMiners/storychecker/blob/master/aafefaeafeafeafeafeafea.png?raw=true)
 
 Then Click on "my-exe"
 
